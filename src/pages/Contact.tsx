@@ -17,7 +17,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <form className="bg-white shadow-md rounded-lg p-8">
+            <form className="bg-white shadow-md rounded-lg p-8" onSubmit={(e) => e.preventDefault()}>
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">
                   Name

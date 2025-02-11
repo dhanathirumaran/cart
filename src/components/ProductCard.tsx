@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Product } from '../types';
+import { Link } from 'react-router-dom';
 
 interface ProductCardProps {
   product: Product;
@@ -18,10 +19,10 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="mt-4 flex justify-between">
         <div>
           <h3 className="text-sm text-gray-700">
-            <a href="#">
+            <Link to={`/product/${product.id}`}>
               <span aria-hidden="true" className="absolute inset-0" />
               {product.name}
-            </a>
+            </Link>
           </h3>
           <p className="mt-1 text-sm text-gray-500">{product.category}</p>
         </div>

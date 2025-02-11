@@ -72,8 +72,8 @@ const About: React.FC = () => {
         {/* Key Features/Values Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Render each feature card */}
-          {featureCards.map((card, index) => (
-            <FeatureCard key={index} {...card} />
+          {featureCards.map((card) => (
+            <FeatureCard key={card.title} {...card} />
           ))}
         </div>
 
@@ -117,4 +117,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;cline
+export default About;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const posts = [
   {
@@ -54,12 +55,12 @@ export default function Blog() {
                 <p className="text-gray-600 mb-4">
                   {post.excerpt}
                 </p>
-                <a
-                  href={`/blog/${post.id}`}
+                <Link
+                  to={`/blog/${post.id}`}
                   className="text-indigo-600 hover:text-indigo-500 font-medium"
                 >
                   Read more →
-                </a>
+                </Link>
               </div>
             </article>
           ))}

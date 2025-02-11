@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, ShoppingCart, Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -8,13 +9,13 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Menu className="h-6 w-6 mr-4 lg:hidden" />
-            <a href="/" className="text-2xl font-bold text-indigo-600">Store</a>
+            <Link to="/" className="text-2xl font-bold text-indigo-600">Store</Link>
           </div>
           
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="/blog" className="text-gray-600 hover:text-gray-900">Blog</a>
-            <a href="/about" className="text-gray-600 hover:text-gray-900">About</a>
-            <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
+            <Link to="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
+            <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
+            <Link to="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
           </div>
 
           <div className="hidden lg:flex flex-1 justify-center px-8">
@@ -41,9 +42,9 @@ export default function Navbar() {
         {/* Mobile menu */}
         <div className="lg:hidden">
           <div className="pt-2 pb-3 space-y-1">
-            <a href="/blog" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Blog</a>
-            <a href="/about" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">About</a>
-            <a href="/contact" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Contact</a>
+            <Link to="/blog" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Blog</Link>
+            <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">About</Link>
+            <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md">Contact</Link>
           </div>
         </div>
       </div>
